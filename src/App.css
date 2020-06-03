@@ -1,38 +1,181 @@
-.App {
+/* Styles for browsehappy screen */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/*End Styled for browsehappy screen */
+
+/*Site Wide Styles*/
+h1{
+  font-family: "Bitter";
+  color : whitesmoke ;  
+}
+
+.jumbotron h1{
+  font-family: "Bitter";
+  color : whitesmoke;
+}
+
+h2{
+  font-family: "Nunito";
+  color : whitesmoke;
+}
+
+h3{
+  font-family: "Nunito";
+  color : whitesmoke;
+}
+
+.button {
+  display: block;
+  width: 115px;
+  height: 25px;
+  background: #4E9CAF;
+  padding: 10px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 5px;
   color: white;
+  font-weight: bold;
+  line-height: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+p{color: whitesmoke; }
+
+section {
+  min-height:  627px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align : center;
+  vertical-align : middle;
+  background-size: cover;
+  background-position: center center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Background colors for sections if background-images do not load*/
+  section:nth-of-type(even){background-color:rgb(80,90,90);}
+  section:nth-of-type(odd){background-color:rgb(140,120,90); }
+
+/*For the contact buttons used*/
+.social-links{
+  margin : 5px;
+  background-color: black;
+  border-color: rgba(154,142,120,255);
+  border-width: .15em;
+  color: rgba(154,142,120,255);
 }
+
+.social-links:hover{
+  border-color: rgba(154,142,120,255);
+  background-color: rgb(114,114,114);
+  color: rgba(154,142,120,255);
+}
+
+/*Jumbotron */
+.jumbotron{
+  padding: 2%;
+  margin-left: 25%;
+  margin-right: 25%;  
+  background-color: rgba(0, 0, 0, 0.2);
+
+}
+/*End Site Wide Styles*/
+
+
+/*Navigation Styles*/ 
+
+/*Style for navigation bar*/
+.navbar{ margin : 0; }
+
+/*End Navigation Styles*/ 
+
+/*Home Section Styles*/
+#home{ background-image:  url(./images/apple-camera-desk-office-med.jpg);}
+/*End Home Section Styles*/
+
+/*Aboust Section Styles*/
+#about{
+  background-image: url(./images/macbook-back.jpg);
+
+  /*We do custom padding for this section to line up with background image*/
+  padding: 0%
+}
+
+#about p{font-size : 2em; }
+
+.side-pic{ display : none; }
+
+.about-text{ padding-top: 6.5%;}
+
+/*Div holding about-image*/
+.img-container{  padding : 5% 0% 0% 5%; }
+
+/*Making about-image circular*/
+.about-image{
+  max-height: 36em;
+  width : auto;
+  padding: 0% 0% 0% 0%;
+  float: left;
+  border-radius : 5%;
+}
+/* End About Section Styles*/
+
+/*Portfolio Section Styles*/
+#portfolio{  background-image: url(./images/macbook-three-quater.jpg);}
+
+/*Thumbnails that holds images*/
+.thumbnail{
+  overflow : hidden;
+  background-color: transparent;
+}
+
+/*Cropping the images inside of this div so they are the same size*/
+.crop img {
+  height: 230px;
+  width: auto;
+}
+
+/*When you hover over a thumnail image we drop the opacity to let whatever is behind this div show through*/
+.thumbnail-img:hover {
+  opacity:0.5;
+  filter:alpha(opacity=20); 
+}
+
+/*When you hover over a .thumbnail image the black background will show through*/ 
+.img-wrap {
+  display:inline-block; 
+  background:black;
+}
+/*End Portfolio Section Styles*/
+
+/*Contact Section Styles*/
+#contact{ background-image: url(./images/macbook-closed.jpg); }
+/*End Contact Section Styles */
+
+/*Footer Section Styles */
+/*Style footer navigation*/
+
+footer{
+  padding-left: 15px;
+}
+
+footer ul{
+  padding : 0px;
+}
+
+footer li {
+  /*        font-size: 1.5em;*/
+  text-align: left;
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+
+/*Style copy right paragraph*/
+footer p{
+  font-size: 1em;
+  /*        margin : 0 0 10px 40px;*/
+  color : black;
+}
+/*End Footer Section Styles*/
