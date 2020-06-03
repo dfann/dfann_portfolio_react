@@ -14,7 +14,7 @@ const AboutSection = () => {
                     <Row>
                         <Figure>
                             <Figure.Caption style={{ textAlign: "center" }}>
-                                <h2>Hi I'm a Full Stack Web Developer &amp; Software Engineer. I Specialize in creating web based applications in Python, Node.JS, and React.</h2>
+                                <h2>Hi! I'm a Full Stack Web Developer that specializes in creating web based applications in Python, Node.JS, and React.</h2>
                             </Figure.Caption>
                             <Figure.Image alt="..." src={portraitImg} style={{width: 375, height: 500}} />
                         </Figure>
