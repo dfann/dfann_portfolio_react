@@ -14,6 +14,10 @@ h1{
   color : whitesmoke ;  
 }
 
+figure{
+  margin: 0;
+}
+
 .jumbotron h1{
   font-family: "Bitter";
   color : whitesmoke;
@@ -31,7 +35,7 @@ h3{
 }
 
 p{
-  font-size: 1.5em;
+  font-size: .8em;
   color: whitesmoke; 
 }
 
@@ -51,8 +55,8 @@ section {
 
 /*Jumbotron */
 .jumbotron{  
-  margin-left: 15%;
-  margin-right: 15%;  
+  margin-left: 0%;
+  margin-right: 0%;  
   background-color: rgba(0, 0, 0, 0.5);
 
 }
@@ -117,3 +121,67 @@ footer p{
   color : black;
 }
 /*End Footer Section Styles*/
+
+
+/*We use bootstrap media queries for most of our responsive designs*/
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    .jumbotron{  
+      margin-left: 15%;
+      margin-right: 15%;  
+      background-color: rgba(0, 0, 0, 0.5);
+    
+    }
+
+    figure{
+      margin: 20px;
+    }
+
+
+    p{
+      font-size: 1.5em;
+      color: whitesmoke; 
+    }
+
+    /*Site Wide Styles*/
+        section{
+            /*background-attachment: fixed;*/
+            min-height:  850px;
+        }              
+    /*End Site Wide Styles*/
+
+        
+    /*About Sectoin Styles*/
+        #about p{
+            text-align: left;
+        }
+    /*End About Sectoin Styles*/
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
+    /*Site Wide Styles*/
+        h1{font-size : 5.5em;}
+
+        .jumbotron h1{font-size : 5.5em;}
+
+        h2{font-size : 3.2em;}       
+
+        
+    /*End Site Wide Styles*/
+    
+    /*About Sectoin Styles*/
+       
+    /*End About Sectoin Styles*/
+}
+
+
+
+
+   
