@@ -1,45 +1,28 @@
 import React from 'react';
-import emailImg from "../images/email-gold.png";
-import githubImg from "../images/github-gold.png";
-import linkedinImg from "../images/linkedin-gold.png";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button'
 import Jumbotron from 'react-bootstrap/Jumbotron'
+import portraitImg from '../images/David-Fann.jpeg'
+import Figure from 'react-bootstrap/Figure';
 
 const AboutSection = () => {
     return (
-        <section id="home">
+        <section id="about">
             <Jumbotron>
-            <Container className="content home-content">
-                <Row>
-                    <Col xs={12}>
-                        <h1>David Fann</h1>
-                        <h2>Let's Build Something Great Together</h2>
-                        <hr />
-                    </Col>
-                </Row>
-                <Row className="social-links-row">
-                    <Col xs={4}>
-                        <Button href="mailto:davidthomasfann@gmail.com" className="social-links" variant="link">
-                            <img src={emailImg} />
-                            Contact
-                         </Button>
-                         <Button href="https://github.com/dfann" className="social-links" variant="link">
-                        <img src={githubImg} />
-                            Github
-                         </Button>     
-                         <Button href="https://www.linkedin.com/in/dfann" className="social-links" variant="link">
-                         <img src={linkedinImg} />
-                            Linkedin
-                         </Button>     
-                    </Col>
-                </Row>
-            </Container>
+                <Container className="content about-content">
+                    <Row>
+                        <Figure>
+                            <Figure.Caption style={{ textAlign: "center" }}>
+                                <h2>Hi I'm a Full Stack Web Developer &amp; Software Engineer. I Specialize in creating web based applications in Python, Node.JS, and React.</h2>
+                            </Figure.Caption>
+                            <Figure.Image alt="..." src={portraitImg} style={{width: 375, height: 500}} />
+                        </Figure>
+                    </Row>
+                </Container>
             </Jumbotron>
-        </section>
 
+        </section>
     );
 }
 

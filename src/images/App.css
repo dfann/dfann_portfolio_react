@@ -10,7 +10,6 @@ Styles for browsehappy screen */
 /*Site Wide Styles*/
 h1{
   font-family: "Bitter";
-  font-size: 5em;
   color : whitesmoke ;  
 }
 
@@ -21,7 +20,6 @@ h1{
 
 h2{
   font-family: "Nunito";
-  font-size: 3em;
   color : whitesmoke;
 }
 
@@ -30,10 +28,20 @@ h3{
   color : whitesmoke;
 }
 
-p{
-  font-size: 1em;
-  color: whitesmoke; 
+.button {
+  display: block;
+  width: 115px;
+  height: 25px;
+  background: #4E9CAF;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
 }
+
+p{color: whitesmoke; }
 
 section {
   min-height:  627px;
@@ -49,11 +57,27 @@ section {
   section:nth-of-type(even){background-color:rgb(80,90,90);}
   section:nth-of-type(odd){background-color:rgb(140,120,90); }
 
+/*For the contact buttons used*/
+.social-links{
+  margin : 5px;
+  background-color: black;
+  border-color: rgba(154,142,120,255);
+  border-width: .15em;
+  color: rgba(154,142,120,255);
+}
+
+.social-links:hover{
+  border-color: rgba(154,142,120,255);
+  background-color: rgb(114,114,114);
+  color: rgba(154,142,120,255);
+}
+
 /*Jumbotron */
-.jumbotron{  
-  margin-left: 15%;
-  margin-right: 15%;  
-  background-color: rgba(0, 0, 0, 0.5);
+.jumbotron{
+  padding: 2%;
+  margin-left: 25%;
+  margin-right: 25%;  
+  background-color: rgba(0, 0, 0, 0.2);
 
 }
 /*End Site Wide Styles*/
@@ -61,6 +85,10 @@ section {
 
 /*Navigation Styles*/ 
 
+/*Style for navigation bar*/
+.navbar{ margin : 0; }
+
+/*End Navigation Styles*/ 
 
 /*Home Section Styles*/
 #home{ background-image:  url(./images/apple-camera-desk-office-med.jpg);}
@@ -73,7 +101,12 @@ section {
 
 #about p{font-size : 2em; }
 
+.side-pic{ display : none; }
+
 .about-text{ padding-top: 6.5%;}
+
+/*Div holding about-image*/
+.img-container{  padding : 5% 0% 0% 5%; }
 
 /*Making about-image circular*/
 .about-image{
@@ -88,8 +121,34 @@ section {
 /*Portfolio Section Styles*/
 #portfolio{  background-image: url(./images/macbook-three-quater.jpg);}
 
+/*Thumbnails that holds images*/
+.thumbnail{
+  overflow : hidden;
+  background-color: transparent;
+}
+
+/*Cropping the images inside of this div so they are the same size*/
+.crop img {
+  height: 230px;
+  width: auto;
+}
+
+/*When you hover over a thumnail image we drop the opacity to let whatever is behind this div show through*/
+.thumbnail-img:hover {
+  opacity:0.5;
+  filter:alpha(opacity=20); 
+}
+
+/*When you hover over a .thumbnail image the black background will show through*/ 
+.img-wrap {
+  display:inline-block; 
+  background:black;
+}
 /*End Portfolio Section Styles*/
 
+/*Contact Section Styles*/
+#contact{ background-image: url(./images/macbook-closed.jpg); }
+/*End Contact Section Styles */
 
 /*Footer Section Styles */
 /*Style footer navigation*/
