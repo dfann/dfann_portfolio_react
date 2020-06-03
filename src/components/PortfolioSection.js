@@ -1,15 +1,14 @@
 import React from 'react';
-import emailImg from "../images/email-gold.png";
-import githubImg from "../images/github-gold.png";
-import linkedinImg from "../images/linkedin-gold.png";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Figure from 'react-bootstrap/Figure'
 import ponduImg from "../images/pondu.png"
+import ponduImgSmall from "../images/pondu-small.png"
+
 import deliciousImg from "../images/thats-delicious.png"
+import deliciousImgSmall from "../images/thats-delicious-small.png"
 
 const PortfolioSection = () => {
     return (
@@ -23,8 +22,9 @@ const PortfolioSection = () => {
                     <Row style={{ display: "flex", flexFlow: "wrap", justifyContent: "center" }}>
                         <Col xs={4}>
                             <PortfolioPiece
-                                href={"https://dfann.github.io/pondu.github.io/"}
-                                imgSrc={ponduImg}
+                                href={"https://dfann.github.io/pondu.github.io/"}                                
+                                imgSrc={ponduImgSmall}
+                                imgSrcLarge={ponduImg}
                                 altText={"..."}
                                 pieceName={"Pondu"}
                                 pieceDescription={"Site I made for a start up built from a given wireframe."}
@@ -33,7 +33,8 @@ const PortfolioSection = () => {
                         <Col xs={4}>
                             <PortfolioPiece
                                 href={"https://now-thats-delicions.herokuapp.com/"}
-                                imgSrc={deliciousImg}
+                                imgSrc={deliciousImgSmall}
+                                imgSrcLarge={deliciousImg}
                                 altText={"..."}
                                 pieceName={"Now That's Deliciousu"}
                                 pieceDescription={"Restaurant review site made with Node.JS and Bootstrap"}
@@ -46,13 +47,14 @@ const PortfolioSection = () => {
     );
 }
 
-const PortfolioPiece = ({ href, imgSrc, altText, pieceName, pieceDescription }) => {
+const PortfolioPiece = ({ href, imgSrc, imgSrcLarge, altText, pieceName, pieceDescription }) => {
     return (
         <a href={href} style={{ textDecoration: "none" }}>
             <Figure>
                 <Figure.Image
                     alt={altText}
                     src={imgSrc}
+                    srcSet={`${imgSrc} 400px, ${imgSrcLarge} 900px`}
                 />
                 <Figure.Caption style={{ textAlign: "center" }}>
                     <h3>{pieceName}</h3>

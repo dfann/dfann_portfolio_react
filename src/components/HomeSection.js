@@ -36,7 +36,7 @@ const HomeSection = () => {
 const ContactLink = ({ href, imgSrc, altText, contactDescription }) => {
     return (
         <a href={href} style={{textDecoration: "none"}}>
-            <Figure>
+            <Figure className="icon">
                 <Figure.Image
                     alt={altText}
                     src={imgSrc}
