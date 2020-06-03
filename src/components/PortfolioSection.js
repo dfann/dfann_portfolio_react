@@ -16,14 +16,14 @@ const PortfolioSection = () => {
         <section id="portfolio">
             <Jumbotron>
                 <Container className="content portfolio-content">
-                    <Row style={{textAlign: "center"}}>
+                    <Row style={{ textAlign: "center" }}>
                         <h1>Portfolio</h1>
                         <h2>Below you'll find some of my recent work</h2>
                     </Row>
-                    <Row style={{display: "flex", flexFlow: "wrap", justifyContent: "center"}}>
+                    <Row style={{ display: "flex", flexFlow: "wrap", justifyContent: "center" }}>
                         <Col xs={4}>
                             <PortfolioPiece
-                                href={"./pondu/"}
+                                href={"https://dfann.github.io/pondu.github.io/"}
                                 imgSrc={ponduImg}
                                 altText={"..."}
                                 pieceName={"Pondu"}
@@ -48,16 +48,18 @@ const PortfolioSection = () => {
 
 const PortfolioPiece = ({ href, imgSrc, altText, pieceName, pieceDescription }) => {
     return (
-        <Figure>
-            <Figure.Image
-                alt={altText}
-                src={imgSrc}
-            />
-            <Figure.Caption style={{textAlign: "center"}}> 
-                <h3>{pieceName}</h3>
-                <p>{pieceDescription}</p>
-            </Figure.Caption>
-        </Figure>
+        <a href={href} style={{ textDecoration: "none" }}>
+            <Figure>
+                <Figure.Image
+                    alt={altText}
+                    src={imgSrc}
+                />
+                <Figure.Caption style={{ textAlign: "center" }}>
+                    <h3>{pieceName}</h3>
+                    <p>{pieceDescription}</p>
+                </Figure.Caption>
+            </Figure>
+        </a>
     );
 }
 

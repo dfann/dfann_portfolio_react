@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import HomeSection from "./components/HomeSection";
 import PortfolioSection from "./components/PortfolioSection";
 import AboutSection from "./components/AboutSection";

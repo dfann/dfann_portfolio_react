@@ -35,16 +35,18 @@ const HomeSection = () => {
 
 const ContactLink = ({ href, imgSrc, altText, contactDescription }) => {
     return (
-        <Figure>
-            <Figure.Image
-                alt={altText}
-                src={imgSrc}
-                style={{ width: 50, height: 50 }}
-            />
-            <Figure.Caption style={{ textAlign: "center" }}>
-                <p>{contactDescription}</p>
-            </Figure.Caption>
-        </Figure>      
+        <a href={href} style={{textDecoration: "none"}}>
+            <Figure>
+                <Figure.Image
+                    alt={altText}
+                    src={imgSrc}
+                    style={{ width: 50, height: 50 }}
+                />
+                <Figure.Caption style={{ textAlign: "center" }}>
+                    <p>{contactDescription}</p>
+                </Figure.Caption>
+            </Figure>      
+        </a>
     )
 }
 
